@@ -1,0 +1,14 @@
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\bin\Debug\net7.0\Votaciones.exe
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\bin\Debug\net7.0\Votaciones.deps.json
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\bin\Debug\net7.0\Votaciones.runtimeconfig.json
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\bin\Debug\net7.0\Votaciones.dll
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\bin\Debug\net7.0\Votaciones.pdb
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\Votaciones.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\Votaciones.AssemblyInfoInputs.cache
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\Votaciones.AssemblyInfo.cs
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\Votaciones.csproj.CoreCompileInputs.cache
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\Votaciones.dll
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\refint\Votaciones.dll
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\Votaciones.pdb
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\Votaciones.genruntimeconfig.cache
+C:\Users\Brayan17King\Downloads\Votaciones-pushUp\obj\Debug\net7.0\ref\Votaciones.dll
