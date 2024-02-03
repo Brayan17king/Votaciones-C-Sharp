@@ -1,77 +1,89 @@
-﻿internal class Program
+﻿class Program
 {
-    private static void Main(string[] args)
+    static void Main(string[] args)
     {
-        bool salir = true;
-        while (salir)
+        //Solicitar al usuario la cantidad de universidades
+        Console.WriteLine("Ingrese la cantidad de universidades que participan en el proceso: ");
+        int cantidadUniversidades = int.Parse(Console.ReadLine());
+
+        //Variables para almacenar los totales de votos
+        int totalAceptadas = 0;
+        int totalRechazadas = 0;
+        int totalEmpates = 0;
+
+        //Recorrer cada universidad
+        for (int i = 1; i <= cantidadUniversidades; i++)
         {
-            Console.Clear();
-            Console.Write("Ingrese el numero de universidades: ");
-            int opcion = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < opcion; i++)
+            //Solicitar el nombre de la universidad
+            Console.WriteLine("Ingrese el nombre de la universidad {0}: ", i);
+            string nombreUniversidad = Console.ReadLine();
+
+            //Variables para almacenar los votos de la universidad
+            int votosAceptados = 0;
+            int votosRechazados = 0;
+            int votosNulos = 0;
+            int votosBlancos = 0;
+
+            //Leer los votos de la universidad
+            bool continuar = true;
+            while (continuar)
             {
-                int a = 0;
-                int r = 0;
-                int b = 0;
-                int n = 0;
+                Console.WriteLine("Ingrese un voto (A: Aceptar, R: Rechazar, N: Nulo, B: Blanco, X: Terminar): ");
+                string voto = Console.ReadLine();
 
-                int ua = 0;
-                int ur = 0;
-                int ub = 0;
+                switch (voto.ToUpper())
+                {
+                    case "A":
+                        votosAceptados++;
+                        break;
+                    case "R":
+                        votosRechazados++;
+                        break;
+                    case "N":
+                        votosNulos++;
+                        break;
+                    case "B":
+                        votosBlancos++;
+                        break;
+                    case "X":
+                        continuar = false;
+                        break;
+                    default:
+                        Console.WriteLine("Voto inválido. Intente de nuevo.");
+                        break;
+                }
+            }
 
-                Console.Write("Universidad: ");
-                string universidad = Console.ReadLine();
-                string x = string.Empty;
-                bool loop = true;
-                while (loop)
-                {
-                    Console.Write("Voto: ");
-                    string opc = Console.ReadLine().ToLower();
+            //Mostrar los totales de votos de la universidad
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("Universidad: {0}", nombreUniversidad);
+            Console.WriteLine("Votos Aceptados: {0}", votosAceptados);
+            Console.WriteLine("Votos Rechazados: {0}", votosRechazados);
+            Console.WriteLine("Votos Nulos: {0}", votosNulos);
+            Console.WriteLine("Votos Blancos: {0}", votosBlancos);
+            Console.WriteLine("----------------------------------------");
 
-                    if (opc == "a")
-                    {
-                        a += 1;
-                    }
-                    else if (opc == "r")
-                    {
-                        r += 1;
-                    }
-                    else if (opc == "b")
-                    {
-                        b += 1;
-                    }
-                    else if (opc == "n")
-                    {
-                        n += 1;
-                    }
-                    else if (opc == "x")
-                    {
-                        loop = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Votol no valido");
-                    }
-                }
-                Console.WriteLine($"{universidad} : {a} aceptan : {r} rechazan : {i} blanco : {n} nulos\n");
-                if (a > r)
-                {
-                    ua += 1;
-                }
-                else if (r > a)
-                {
-                    ur += 1;
-                }
-                else if (r < b || a < b)
-                {
-                    ub += 1;
-                }
-                Console.WriteLine($"Universidades que aceptan : {ua}");
-                Console.WriteLine($"Universidades que aceptan : {ur}");
-                Console.WriteLine($"Universidades que aceptan : {ub}");
-                Console.ReadLine();
-                salir = false;
+            //Actualizar los totales generales
+            if (votosAceptados > votosRechazados)
+            {
+                totalAceptadas++;
+            }
+            else if (votosRechazados > votosAceptados)
+            {
+                totalRechazadas++;
+            }
+            else
+            {
+                totalEmpates++;
             }
         }
+
+        //Mostrar el resultado de la votación
+        Console.WriteLine("----------------------------------------");
+        Console.WriteLine("Resultado de la votación:");
+        Console.WriteLine("Universidades que aceptan: {0}", totalAceptadas);
+        Console.WriteLine("Universidades que rechazan: {0}", totalRechazadas);
+        Console.WriteLine("Universidades con empate: {0}", totalEmpates);
+        Console.WriteLine("----------------------------------------");
     }
 }
